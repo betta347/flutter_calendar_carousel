@@ -8,10 +8,7 @@ const TextStyle defaultPrevDaysTextStyle = const TextStyle(
   color: Colors.grey,
   fontSize: 14.0,
 );
-const TextStyle defaultNextDaysTextStyle = const TextStyle(
-  color: Colors.grey,
-  fontSize: 14.0,
-);
+const TextStyle defaultNextDaysTextStyle = const TextStyle(color: Colors.grey, fontSize: 14.0);
 const TextStyle defaultDaysTextStyle = const TextStyle(
   color: Colors.black,
   fontSize: 14.0,
