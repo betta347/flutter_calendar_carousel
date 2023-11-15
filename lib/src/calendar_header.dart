@@ -33,15 +33,15 @@ class CalendarHeader extends StatelessWidget {
   TextStyle get getTextStyle => headerTextStyle ?? defaultHeaderTextStyle;
 
   Widget _leftButton() => IconButton(
+        focusColor: Colors.transparent,
         onPressed: onLeftButtonPressed,
-        icon:
-            leftButtonIcon ?? Icon(Icons.chevron_left, color: headerIconColor),
+        icon: leftButtonIcon ?? Icon(Icons.chevron_left, color: headerIconColor),
       );
 
   Widget _rightButton() => IconButton(
+        focusColor: Colors.transparent,
         onPressed: onRightButtonPressed,
-        icon: rightButtonIcon ??
-            Icon(Icons.chevron_right, color: headerIconColor),
+        icon: rightButtonIcon ?? Icon(Icons.chevron_right, color: headerIconColor),
       );
 
   Widget _headerTouchable() => TextButton(
@@ -59,15 +59,11 @@ class CalendarHeader extends StatelessWidget {
           margin: headerMargin,
           child: DefaultTextStyle(
               style: getTextStyle,
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    showHeaderButtons ? _leftButton() : Container(),
-                    isTitleTouchable
-                        ? _headerTouchable()
-                        : Text(headerTitle, style: getTextStyle),
-                    showHeaderButtons ? _rightButton() : Container(),
-                  ])),
+              child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: <Widget>[
+                showHeaderButtons ? _leftButton() : Container(),
+                isTitleTouchable ? _headerTouchable() : Text(headerTitle, style: getTextStyle),
+                showHeaderButtons ? _rightButton() : Container(),
+              ])),
         )
       : Container();
 }
