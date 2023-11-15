@@ -32,16 +32,17 @@ class CalendarHeader extends StatelessWidget {
 
   TextStyle get getTextStyle => headerTextStyle ?? defaultHeaderTextStyle;
 
-  Widget _leftButton() => IconButton(
+  Widget _leftButton() => InkWell(
+        onTap: onLeftButtonPressed,
         focusColor: Colors.transparent,
-        onPressed: onLeftButtonPressed,
-        icon: leftButtonIcon ?? Icon(Icons.chevron_left, color: headerIconColor),
+        // onPressed: onLeftButtonPressed,
+        child: leftButtonIcon ?? Icon(Icons.chevron_left, color: headerIconColor),
       );
 
-  Widget _rightButton() => IconButton(
+  Widget _rightButton() => InkWell(
         focusColor: Colors.transparent,
-        onPressed: onRightButtonPressed,
-        icon: rightButtonIcon ?? Icon(Icons.chevron_right, color: headerIconColor),
+        onTap: onRightButtonPressed,
+        child: rightButtonIcon ?? Icon(Icons.chevron_right, color: headerIconColor),
       );
 
   Widget _headerTouchable() => TextButton(
