@@ -37,7 +37,7 @@ class CalendarHeader extends StatelessWidget {
         focusColor: Colors.transparent,
         // onPressed: onLeftButtonPressed,
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.only(left: 8.0, top: 16, bottom: 8),
           child: leftButtonIcon ?? Icon(Icons.chevron_left, color: headerIconColor),
         ),
       );
@@ -46,7 +46,7 @@ class CalendarHeader extends StatelessWidget {
         focusColor: Colors.transparent,
         onTap: onRightButtonPressed,
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.only(right: 8.0, top: 16, bottom: 8),
           child: rightButtonIcon ?? Icon(Icons.chevron_right, color: headerIconColor),
         ),
       );
