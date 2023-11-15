@@ -36,13 +36,19 @@ class CalendarHeader extends StatelessWidget {
         onTap: onLeftButtonPressed,
         focusColor: Colors.transparent,
         // onPressed: onLeftButtonPressed,
-        child: leftButtonIcon ?? Icon(Icons.chevron_left, color: headerIconColor),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: leftButtonIcon ?? Icon(Icons.chevron_left, color: headerIconColor),
+        ),
       );
 
   Widget _rightButton() => InkWell(
         focusColor: Colors.transparent,
         onTap: onRightButtonPressed,
-        child: rightButtonIcon ?? Icon(Icons.chevron_right, color: headerIconColor),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: rightButtonIcon ?? Icon(Icons.chevron_right, color: headerIconColor),
+        ),
       );
 
   Widget _headerTouchable() => TextButton(
